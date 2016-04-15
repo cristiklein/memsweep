@@ -1,6 +1,6 @@
 CFLAGS=-O3 -g
 
-all: memsweap
+all: memsweep
 
 clean:
-	$(RM) memsweap
+	$(RM) memsweep

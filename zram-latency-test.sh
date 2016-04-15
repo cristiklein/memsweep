@@ -33,18 +33,18 @@ swapon /dev/zram0
 make
 
 set_latency 1000
-./memsweap -s 5g -i 5
+./memsweep -s 5g -i 5
 
 set_latency 1000
-./memsweap -s 10g -i 5
+./memsweep -s 10g -i 5
 
 set_latency 100
-./memsweap -s 10g -i 5
+./memsweep -s 10g -i 5
 
 set_latency 10
-./memsweap -s 10g -i 5
+./memsweep -s 10g -i 5
 
 set_latency 0
-./memsweap -s 10g -i 5
+./memsweep -s 10g -i 5
 
 cleanup

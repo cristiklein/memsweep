@@ -65,8 +65,8 @@ int main(int argc, char **argv) {
                 exit(EXIT_FAILURE);
         }
 
-        volatile char *area_to_sweap = malloc(size);
-        if (!area_to_sweap) {
+        volatile char *area_to_sweep = malloc(size);
+        if (!area_to_sweep) {
                 fprintf(stderr, "Could not allocate memory of size %lu\n", size);
                 exit(EXIT_FAILURE);
         }
@@ -77,7 +77,7 @@ int main(int argc, char **argv) {
         for (size_t iteration = 0; iteration < iterations; iteration++) {
                 struct timespec start, end;
                 clock_gettime(CLOCK_MONOTONIC, &start);
-                for (volatile char *p = area_to_sweap; p < area_to_sweap + size; p += page_size)
+                for (volatile char *p = area_to_sweep; p < area_to_sweep + size; p += page_size)
                         *p = *p + iteration;
                 clock_gettime(CLOCK_MONOTONIC, &end);
 
